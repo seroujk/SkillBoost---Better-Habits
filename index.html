@@ -15,7 +15,7 @@
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./blocks/modal.css">
+    <link rel="stylesheet" href="./blocks/modal.css" />
   </head>
   <body>
     <div class="page">
@@ -120,27 +120,83 @@
             </div>
           </div>
         </section>
-        <section class="workflow"></section>
-        <section class="cards___section">
-            <div class="cards___container">
-              <button class="add-more-cards-btn" >Add More Cards</button>
-              <template id="card">
-                <li class="card">
-                  <button class="card__btn-delete" type="button"></button>
-                  <div class="card__content">
-                    <h2 class="card__title"></h2>
-                    <ul class="card__list">
-                      <p class="card__list-item"></p>
-                    </ul>
-                    <button class="edit-suggestions-btn" >Edit Suggestions</button>
-                    <button type="button" class="card__btn"></button>
-                  </div>
-                </li>
-              </template>
-            </div>
-        </section>
-        <div class="modal-outer-container" id="addMoreCardsModalContainer"></div>
-        <div class="modal-outer-container" id="editSuggestionsModalContainer"></div>
+        <button type="button" class="add-more-cards-btn">
+          <span class="add-button-icon"></span>Add More Cards
+        </button>
+        <button type="button" class="edit-suggestions-btn">
+          <span class="edit-button-icon"></span>Edit Suggestions
+        </button>
+
+        <!-- Add more cards modal -->
+        <div class="modal" id="add-more-cards-modal">
+          <div class="modal__container">
+            <button class="modal__close-btn" type="button"></button>
+            <h2 class="modal__title">Add more cards</h2>
+            <form class="modal__form" id="add-more-cards-form" novalidate>
+              <label for="card-title-input" class="modal__label"
+                >Card Title
+                <input
+                  id="card-title-input"
+                  type="text"
+                  class="modal__input"
+                  placeholder="Enter your card title"
+                  minlength="2"
+                  maxlength="50"
+                  required
+                />
+              </label>
+              <label for="routine-input" class="modal__label"
+                >Routine
+                <textarea
+                  id="routine-input"
+                  class="modal__input"
+                  placeholder="Enter your routine"
+                  minlength="2"
+                  maxlength="500"
+                  rows="5"
+                  required
+                ></textarea>
+              </label>
+              <button class="modal__submit-btn" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+        <!-- Edit suggestions modal -->
+        <div class="modal" id="edit-suggestions-modal">
+          <div class="modal__container">
+            <button class="modal__close-btn" type="button"></button>
+            <h2 class="modal__title">Edit Suggestions</h2>
+            <form class="modal__form" id="edit-suggestions-form" novalidate>
+              <label for="card-title-input" class="modal__label"
+                >Card Title
+                <input
+                  id="card-title-input"
+                  type="text"
+                  class="modal__input"
+                  minlength="2"
+                  maxlength="50"
+                  placeholder="Enter your card title"
+                  required
+                />
+                <span id="card-title-input-error" class="modal__error"></span>
+              </label>
+              <label for="routine-input" class="modal__label"
+                >Routine
+                <textarea
+                  id="routine-input"
+                  class="modal__input"
+                  placeholder="Enter your routine"
+                  minlength="2"
+                  maxlength="500"
+                  rows="5"
+                  required
+                ></textarea>
+                <span id="routine-input-error" class="modal__error"></span>
+              </label>
+              <button class="modal__submit-btn" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer__inner">
@@ -185,4 +241,3 @@
     <script type="module" src="./index.js"></script>
   </body>
 </html>
-

@@ -1,68 +1,96 @@
-const modalContainer = document.querySelector(".modal-outer-container");
+import { setButtonText } from "./utils/helpers.js";
 const openModalBtn = document.querySelector(".add-more-cards-btn");
 const editSuggestionsBtn = document.querySelector(".edit-suggestions-btn");
 
+const addMoreCadsModal = document.querySelector("#add-more-cards-modal");
+const addMoreCardsModalCloseBtn =
+  addMoreCadsModal.querySelector(".modal__close-btn");
+const addMoreCardsForm = document.forms["add-more-cards-form"];
+const addMoreCardsFormTitleInput =
+  addMoreCadsModal.querySelector("#card-title-input");
+const addMoreCardsFormRoutineInput =
+  addMoreCadsModal.querySelector("#routine-input");
+const addMoreCardsFormSubmitBtn =
+  addMoreCadsModal.querySelector(".modal__submit-btn");
+
+const editSuggestionsModal = document.querySelector("#edit-suggestions-modal");
+const editSuggestionsModalClosebtn =
+  editSuggestionsModal.querySelector(".modal__close-btn");
+const editSuggestionsForm = document.forms["edit-suggestions-form"];
+const editSuggestionsFormTitleInput =
+  editSuggestionsModal.querySelector("#card-title-input");
+const editSuggestionsFormRoutineInput =
+  editSuggestionsModal.querySelector("#routine-input");
+const editSuggestionsFormSubmitBtn =
+  editSuggestionsModal.querySelector(".modal__submit-btn");
+
+// Templated related logic
+// const cardTemplate = document
+//   .querySelector("#card")
+//   .content.querySelector(".card");
+// const cardsList = document.querySelector(".cards___container");
+
+// function getCardElement(data) {
+//   const cardElement = cardTemplate.cloneNode(true);
+//   const cardTitleEl = cardElement.querySelector(".card__title");
+//   const cardRoutineEl = cardElement.querySelector(".card__routine");
+// }
+
 openModalBtn.addEventListener("click", () => {
-    console.log("openModalBtn clicked");
-    modalContainer.innerHTML = "";
-    fetch("./pages/addMoreCards.html")
-        .then(response => response.text())
-        .then(data => {
-            console.log("data fetched");
-            modalContainer.innerHTML = data;
-            
-            // Now get all modal elements after content is loaded
-            const modal = document.querySelector("#add-more-cards-modal");
-            const addMoreCardsModalCloseBtn = modal.querySelector(".modal__close-btn");
-            const addMoreCardsForm = document.forms["add-more-cards-form"];
-            const addMoreCardsFormTitleInput = modal.querySelector("#card-title-input");
-            const addMoreCardsFormRoutineInput = modal.querySelector("#routine-input");
-            const addMoreCardsFormSubmitBtn = modal.querySelector(".modal__submit-btn");
-            
-            console.log("modal after fetch:", modal);
-            
-            // Setup close button event listener
-            addMoreCardsModalCloseBtn.addEventListener("click", () => {
-                closeModal(modal);
-            });
-            
-            // Setup form submit event listener (you can uncomment and complete this)
-            // addMoreCardsForm.addEventListener("submit", (evt) => {
-            //     evt.preventDefault();
-            //     // Handle form submission here
-            // });
-            
-            // Open the modal
-            openModal(modal);
-        });
+  openModal(addMoreCadsModal);
+});
+
+addMoreCardsModalCloseBtn.addEventListener("click", () => {
+  closeModal(addMoreCadsModal);
 });
 
 editSuggestionsBtn.addEventListener("click", () => {
-    console.log("editSuggestionsBtn clicked");
-    modalContainer.innerHTML = "";
-    fetch("./pages/editSuggestions.html")
-        .then(response => response.text())
-        .then(data => {
-            console.log("data fetched");
-            modalContainer.innerHTML = data;
-        });
+  openModal(editSuggestionsModal);
+});
+
+editSuggestionsModalClosebtn.addEventListener("click", () => {
+  closeModal(editSuggestionsModal);
 });
 
 function openModal(modal) {
-    modal.classList.add("modal_is-opened");
-    document.addEventListener("keydown", handleEscapeKey);
+  modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
-    modal.classList.remove("modal_is-opened");
-    document.removeEventListener("keydown", handleEscapeKey);
+  modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
-  
+
 function handleEscapeKey(evt) {
-    if (evt.key === "Escape") {
-      const openedModal = document.querySelector(".modal.modal_is-opened");
-      if (openedModal) {
-        closeModal(openedModal);
-      }
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal.modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
     }
+  }
 }
+
+// function to handle AddMoreCards form submit
+function handleAddMoreCardsFormSubmit(evt) {
+  evt.preventDefault();
+  const submitBtn = evt.submitter;
+  // setButtonText(submitBtn, true);
+}
+
+//function to handle EditSuggestions form submit
+function handleEditSuggestionsFormSubmit(evt) {
+  evt.preventDefault();
+  const submitBtn = evt.submitter;
+  // setButtonText(submitBtn, true);
+}
+
+addMoreCardsFormSubmitBtn.addEventListener(
+  "submit",
+  handleAddMoreCardsFormSubmit
+);
+
+editSuggestionsFormSubmitBtn.addEventListener(
+  "submit",
+  handleEditSuggestionsFormSubmit
+);
