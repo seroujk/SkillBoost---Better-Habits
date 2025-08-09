@@ -1,0 +1,138 @@
+.footer {
+  background: #030712;
+  color: #e5e7eb;
+  padding: 48px 16px 28px;
+}
+
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.footer__brand {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.footer__logo-name {
+  margin: 0 0 4px 0;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.footer__tagline {
+  margin: 0;
+  max-width: 520px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #9ca3af;
+}
+
+.footer__heading {
+  margin: 0 0 10px 0;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.footer__link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer__link:hover,
+.footer__link:focus {
+  color: #4f39f6;
+  outline: none;
+}
+
+.footer__social {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.footer__github {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s, transform 0.15s;
+}
+.footer__github:hover,
+.footer__github:focus {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.footer__github-icon {
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/footer/github.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: invert(1) brightness(1.2);
+}
+.footer__github-text {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.footer__legal {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: left;
+    place-items: center;
+    text-align: center;
+  }
+  .footer__logo {
+    display: none;
+  }
+}
