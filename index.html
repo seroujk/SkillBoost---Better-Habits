@@ -1,1 +1,165 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillBoost</title>
+    <meta name="author" content="React this Team" />
+    <meta
+      name="description"
+      content="SkillBoost helps you build productivity and habits with tips on routines, study, wellness, and time management."
+    />
+    <meta
+      name="keywords"
+      content="productivity, habits, morning routines, study tips, wellness, time management, SkillBoost"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__brand">
+            <img
+              src="./images/logo.svg"
+              alt="SkillBoost Logo"
+              class="nav__brand-logo"
+            />
+            <h2 class="nav__brand-name">SkillBoost</h2>
+          </div>
+          <input type="checkbox" id="menu-toggle" class="nav__menu-toggle" />
+          <label for="menu-toggle" class="nav__menu-label"></label>
+          <ul class="nav__links">
+            <li>
+              <a href="#" class="nav__link">Templates</a>
+            </li>
+            <li>
+              <a href="#" class="nav__link">Routine Tracker</a>
+            </li>
+            <li>
+              <a href="#" class="nav__link">Your Own Podcast</a>
+            </li>
+            <li>
+              <a href="#" class="nav__link nav__theme-mobile">Dark Mode 🌙 </a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="nav__theme"
+            aria-label="Toggle theme"
+          ></button>
+        </nav>
+      </header>
+      <main class="content">
+        <section class="hero page__section">
+          <h1 class="hero__title">
+            Transform Your Life With
+            <span class="hero__title-highlit">Better Habits</span>
+          </h1>
+          <p class="hero__description">
+            Discover proven strategies, track your progress, and build lasting
+            habits that boost your productivity and well-being.
+          </p>
+          <button type="button" class="hero__button">
+            Get Started
+            <span class="hero__button-icon"></span>
+          </button>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="hero__stat-icon hero__stat-icon--code"></div>
+              <span class="hero__stat-metric">100%</span>
+              <p class="hero__stat-label">Open Source</p>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-icon hero__stat-icon--gemini"></div>
+              <span class="hero__stat-metric">AI</span>
+              <p class="hero__stat-label">Powered by Gemini</p>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-icon hero__stat-icon--increase"></div>
+              <span class="hero__stat-metric">4+</span>
+              <p class="hero__stat-label">Habit Templates</p>
+            </div>
+          </div>
+        </section>
+        <section class="areas page__section">
+          <h2 class="areas__title">Explore Our Productivity Areas</h2>
+          <div class="areas__cards">
+            <div class="area__card">
+              <div class="area__card-icon area__card-icon--morning"></div>
+              <h3 class="area__card-title">Morning Routines</h3>
+              <p class="area__card-description">
+                Start your day right with powerful morning habits and routines
+                by SkillBoost Templates.
+              </p>
+            </div>
+            <div class="area__card">
+              <div class="area__card-icon area__card-icon--brain"></div>
+              <h3 class="area__card-title">Study Habits</h3>
+              <p class="area__card-description">
+                Enhance your learning with proven study techniques and methods.
+              </p>
+            </div>
+            <div class="area__card">
+              <div class="area__card-icon area__card-icon--heart"></div>
+              <h3 class="area__card-title">Wellness</h3>
+              <p class="area__card-description">
+                Build healthy habits for your physical and mental well-being
+                that will change your life.
+              </p>
+            </div>
+            <div class="area__card">
+              <div class="area__card-icon hero__stat-icon--clock"></div>
+              <h3 class="area__card-title">Time Management</h3>
+              <p class="area__card-description">
+                Master your time with effective planning and productivity
+                systems.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="workflow"></section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <img
+              src="./images/logo.svg"
+              alt="SkillBoost logo"
+              class="footer__logo"
+            />
+            <div class="footer__brand-text">
+              <h2 class="footer__logo-name">SkillBoost</h2>
+              <p class="footer__tagline">
+                Empowering you to build better habits and boost your
+                productivity.
+              </p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="Features">
+            <h3 class="footer__heading">Features</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Morning Routines</a></li>
+              <li><a href="#" class="footer__link">Study Habits</a></li>
+              <li><a href="#" class="footer__link">Wellness</a></li>
+              <li><a href="#" class="footer__link">Time Management</a></li>
+            </ul>
+          </nav>
+          <div class="footer__social">
+            <a
+              class="footer__github"
+              href="https://github.com/seroujk/SkillBoost---Better-Habits"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="footer__github-icon" aria-hidden="true"></span>
+              <span class="footer__github-text">GitHub</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer__legal">© 2025 SkillBoost. All rights reserved.</div>
+      </footer>
+    </div>
+  </body>
+</html>

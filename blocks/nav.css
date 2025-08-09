@@ -1,0 +1,178 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav__links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  transition: font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s,
+    letter-spacing 0.16s;
+}
+
+.nav__brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav__brand-logo {
+  width: 36px;
+  height: 36px;
+}
+
+.nav__brand-name {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: black;
+}
+
+.nav__theme {
+  background-image: url(../images/buttons/moon.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  width: 42px;
+  height: 42px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s, background-color 0.2s, transform 0.18s;
+  transform: scale(1);
+}
+
+.nav__menu-toggle {
+  display: none;
+}
+
+.nav__menu-label {
+  display: none;
+}
+
+.nav__theme-mobile {
+  display: none;
+}
+
+.nav__theme:hover,
+.nav__theme:focus {
+  box-shadow: 0 4px 16px rgba(79, 57, 246, 0.2);
+  outline: none;
+  background-color: #f3f3fe;
+  transform: scale(1.08);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  font-size: 1.1rem;
+  color: #4f39f6;
+  letter-spacing: 0.01em;
+}
+@media screen and (max-width: 660px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav__brand-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav__brand-name {
+    font-size: 1.1rem;
+  }
+
+  .nav__theme {
+    display: none;
+  }
+
+  .nav__menu-toggle {
+    display: none;
+  }
+
+  .nav__menu-label {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-image: url(../images/buttons/menu.svg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .nav__menu-label:hover {
+    box-shadow: 0 4px 12px rgba(79, 57, 246, 0.15);
+  }
+
+  .nav__menu-toggle:checked + .nav__menu-label {
+    background-image: url(../images/buttons/exit.svg);
+  }
+
+  .nav__links {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav__menu-toggle:checked ~ .nav__links {
+    margin-top: 15px;
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .nav__link {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+  }
+
+  .nav__link:last-child {
+    border-bottom: none;
+  }
+
+  .nav__theme-mobile {
+    display: block;
+  }
+
+  .nav__link:hover {
+    font-size: 0.95rem;
+    letter-spacing: 0;
+  }
+}

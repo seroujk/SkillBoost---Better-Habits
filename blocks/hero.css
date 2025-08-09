@@ -1,0 +1,149 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__title {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.hero__title-highlit {
+  display: block;
+  background: linear-gradient(90deg, #5038f6, #9710fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__description {
+  margin: 0;
+  max-width: 900px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #4a5565;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.hero__button {
+  display: inline-flex;
+  background-color: #4f39f6;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+  border-color: transparent;
+  color: white;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 8px 40px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+  margin-bottom: 120px;
+}
+
+.hero__button-icon {
+  display: inline-block;
+  background-color: transparent;
+  background-image: url(../images/hero/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  width: 32px;
+  height: 32px;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: #3825d9;
+  transform: translateY(-3px) scale(1.05);
+  outline: none;
+}
+
+.hero__stats {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__stat {
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 50px;
+}
+
+.hero__stat-icon {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+  background-size: 60%;
+  border-radius: 50%;
+}
+
+.hero__stat-icon--gemini {
+  background-image: url(../images/hero/gemini.svg);
+  background-size: 50%;
+}
+
+.hero__stat-icon--increase {
+  background-image: url(../images/hero/increase.svg);
+}
+
+.hero__stat-icon--code {
+  background-image: url(../images/hero/code.svg);
+}
+
+.hero__stat-metric {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.hero__stat-label {
+  margin: 0;
+  max-width: 900px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #4a5565;
+}
+
+@media (max-width: 700px) {
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__stat {
+    padding: 20px;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+}
