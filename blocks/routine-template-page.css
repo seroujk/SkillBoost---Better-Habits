@@ -72,3 +72,26 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.cards__container {
+  list-style-type: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
+  padding: 0;
+  margin: 20px auto 0;
+}
+
+.card {
+  background-color: #f2f2f2;
+  max-width: 413px;
+  position: relative;
+  height: 413px;
+}
+
+.card__btn-delete {
+  height: 30px;
+  width: 30px;
+  border: none;
+}
