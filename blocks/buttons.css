@@ -1,0 +1,65 @@
+.add-more-cards-btn {
+  display: inline-flex;
+  background-color: #4f39f6;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+  border-color: transparent;
+  color: white;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 8px 40px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+}
+
+.add-button-icon {
+  display: inline-block;
+  background-color: transparent;
+  background-image: url(../images/cards/plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.add-more-cards-btn:hover,
+.add-more-cards-btn:focus {
+  background-color: #3825d9;
+  transform: translateY(-3px) scale(1.05);
+  outline: none;
+}
+
+.edit-suggestions-btn {
+  display: inline-flex;
+  background-color: #4f39f6;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+  border-color: transparent;
+  color: white;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 8px 40px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+}
+
+.edit-button-icon {
+  display: inline-block;
+  background-color: transparent;
+  background-image: url(../images/cards/pencil-light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.edit-suggestions-btn:hover,
+.edit-suggestions-btn:focus {
+  background-color: #3825d9;
+  transform: translateY(-3px) scale(1.05);
+  outline: none;
+}
