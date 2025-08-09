@@ -1,1 +1,3 @@
-/* This file will be used to style pages */
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts.css');
+@import url('./blocks/modal.css');
