@@ -1,6 +1,6 @@
 /* This file will be used to style pages */
-@import url(./vendor/normalize.css);
-@import url(./vendor/fonts.css);
+@import url(./css/vendor/normalize.css);
+@import url(./css/vendor/fonts.css);
 @import url(./css/base/variables.css);
 @import url(./css/blocks/pages/home/page.css);
 @import url(./css/blocks/common/nav.css);

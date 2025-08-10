@@ -44,7 +44,7 @@
   background-color: transparent;
   align-self: flex-end;
   cursor: pointer;
-  background-image: url(../images/exit.svg);
+  background-image: url(../../../../images/exit.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
