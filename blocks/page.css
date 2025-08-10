@@ -1,0 +1,9 @@
+.page {
+  background-color: #ebf2ff;
+  font-family: "Geist", "Geist Mono" Arial, Helvetica, sans-serif;
+}
+
+.page__section {
+  margin: 0;
+  padding: 50px;
+}

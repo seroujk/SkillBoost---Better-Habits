@@ -1,2 +1,12 @@
 /* This file will be used to style pages */
 @import url(./blocks/routine-template-page.css);
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts.css);
+@import url(./blocks/page.css);
+@import url(./blocks/nav.css);
+@import url(./blocks/hero.css);
+@import url(./blocks/areas.css);
+@import url(./blocks/workflow.css);
+@import url(./blocks/footer.css);
+
+

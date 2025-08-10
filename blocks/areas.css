@@ -1,0 +1,120 @@
+.areas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.areas__title {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.areas__cards {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 40px 20px;
+  align-items: stretch;
+}
+
+.area__card {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.area__card:hover,
+.area__card:focus-within {
+  box-shadow: 0 12px 28px rgba(79, 57, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.area__card-title {
+  padding: 0;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: black;
+  text-align: center;
+  margin: 10px;
+}
+
+.area__card-description {
+  margin: 10px;
+  padding: 0;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #4a5565;
+  text-align: center;
+}
+
+.area__card-icon {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.area__card-icon--morning {
+  background-image: url(../images/areas/morning.svg),
+    linear-gradient(90deg, #ff7b19, #fc4831);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 60%, 100%;
+}
+
+.area__card-icon--brain {
+  background-image: url(../images/areas/brain.svg),
+    linear-gradient(90deg, #5498ff, #5f6dff);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 60%, 100%;
+}
+
+.area__card-icon--heart {
+  background-image: url(../images/areas/heart.svg),
+    linear-gradient(90deg, #00d974, #00c37b);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 60%, 100%;
+}
+
+.hero__stat-icon--clock {
+  background-image: url(../images/areas/clock.svg),
+    linear-gradient(90deg, #cc74f5, #ef46ab);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 60%, 100%;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 700px) {
+  .areas__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .areas__cards {
+    grid-template-columns: 1fr;
+  }
+}
