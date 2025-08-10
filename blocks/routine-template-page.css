@@ -260,9 +260,9 @@
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 417px) {
   .page {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     padding: 20px;
   }
 
@@ -277,35 +277,34 @@
   }
 
   .heading__title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .heading__span {
-    font-size: 1.5rem;
-  }
-
-  .heading__paragraph {
     font-size: 1rem;
   }
 
+  .heading__paragraph {
+    font-size: 0.8rem;
+  }
+
   .cards__section {
-    width: 100%;
+    max-width:fit-content
     gap: 10px;
     margin: 0 auto;
   }
 
   .cards__container {
-    max-width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: fit-content;
   }
 
   .card {
-    max-width: 213px;
-    height: 213px;
     padding: 20px;
+    max-width: calc(100%-20px);
   }
 
   .card__title {
