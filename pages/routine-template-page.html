@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="routine, template, daily tasks" />
+    <meta
+      name="description"
+      content="A template for organizing daily routines and tasks." />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <title>Routine Template Page</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <button type="button" class="nav__button"></button>
+            </li>
+            <li class="nav__list-item">
+              <img class="nav__image" src="../images/clock-icon.png" />
+            </li>
+            <li class="nav__list-item">
+              <p class="nav__paragraph">Morning Routines</p>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="heading__section">
+          <h1 class="heading__title">
+            Start Your Day with <span class="heading__span">Purpose</span>
+          </h1>
+          <p class="heading__paragraph">
+            Transform your mornings with proven routines that set you up for
+            <span class="heading__paragraph_span"
+              >success throughout the day.</span
+            >
+          </p>
+        </section>
+        <section class="cards__section">
+          <template id="card">
+            <ul class="cards__container">
+              <li class="card">
+                <button class="card__btn-delete" type="button"></button>
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <ul class="card__list">
+                    <li class="card__list-item">
+                      <span class="card__list-paragraph"></span>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" class="card__btn">
+                  Try This Routine
+                </button>
+              </li>
+            </ul>
+          </template>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+    <script defer src="./scripts/routine-template-page.js"></script>
+  </body>
+</html>
