@@ -1,0 +1,8 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts.css);
+/*  @import url(../blocks/footer.css);  Whe need use the general footer and nav*/
+/*  @import url(../blocks/nav.css); */
+@import url(../blocks/routine-template-page/page.css);
+@import url(../blocks/routine-template-page/header.css);
+@import url(../blocks/routine-template-page/nav.css);
+@import url(../blocks/routine-template-page/card.css);

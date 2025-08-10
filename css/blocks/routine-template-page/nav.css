@@ -1,0 +1,64 @@
+.nav {
+  display: flex;
+  align-self: flex-start;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list-item {
+  padding: 0;
+}
+
+.nav__button {
+  border: none;
+  background-color: #f2f2f2;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url(../images/back-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.nav__image {
+  width: 50px;
+  height: 50px;
+  max-height: fit-content;
+  padding: 0;
+}
+
+.nav__paragraph {
+  margin: 0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+  .nav__image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav__button {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .nav__image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav__button {
+    height: 20px;
+    width: 20px;
+  }
+}
