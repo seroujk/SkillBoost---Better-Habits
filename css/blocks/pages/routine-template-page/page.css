@@ -1,0 +1,28 @@
+.page {
+  background-color: var(--color-bg-routine);
+  font-family: var(--font-primary);
+  padding: var(--spacing-sm);
+  margin: auto;
+  max-width: 100vw;
+  min-height: 100vh;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xxl);
+  color: var(--color-text-primary);
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 950px) {
+  .page {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-sm);
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .page {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+  }
+}

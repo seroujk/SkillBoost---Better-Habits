@@ -1,0 +1,51 @@
+:root {
+  /* Colors */
+  --color-primary: #ff7b19;
+  --color-primary-hover: #e86914;
+  --color-bg-light: #f2f2f2;
+  --color-bg-home: #ebf2ff;
+  --color-bg-routine: #e8e7da;
+  --color-text-primary: #000;
+  --color-text-secondary: #4a5565;
+  --color-marker: #ff7b19;
+  
+  /* Shadows */
+  --shadow-base: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 28px rgba(79, 57, 246, 0.15);
+  
+  /* Border radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 15px;
+  
+  /* Spacing */
+  --spacing-xs: 10px;
+  --spacing-sm: 20px;
+  --spacing-md: 30px;
+  --spacing-lg: 40px;
+  --spacing-xl: 50px;
+  
+  /* Font families */
+  --font-primary: "Geist", Arial, Helvetica, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  
+  /* Font sizes */
+  --font-size-sm: 0.7rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.3rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.5rem;
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  
+  /* Transitions */
+  --transition-base: 0.2s;
+  
+  /* Layout */
+  --max-width-content: 1440px;
+  --card-width: 413px;
+  --card-height: 413px;
+}

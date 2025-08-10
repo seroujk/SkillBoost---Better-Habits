@@ -1,0 +1,9 @@
+.page {
+  background-color: var(--color-bg-home);
+  font-family: var(--font-primary);
+}
+
+.page__section {
+  margin: 0;
+  padding: var(--spacing-xl);
+}
