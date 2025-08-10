@@ -1,6 +1,6 @@
 .page {
   background-color: #ebf2ff;
-  font-family: "Geist", "Geist Mono" Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
 }
 
 .page__section {

@@ -1,0 +1,18 @@
+:root {
+  /* Font families */
+  --font-primary: "Geist", Arial, Helvetica, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  /* Font sizes */
+  --font-size-sm: 0.7rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.3rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.5rem;
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}

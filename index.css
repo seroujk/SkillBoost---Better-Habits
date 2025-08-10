@@ -1,12 +1,10 @@
 /* This file will be used to style pages */
-@import url(./blocks/routine-template-page.css);
-@import url(./vendor/normalize.css);
-@import url(./vendor/fonts.css);
-@import url(./blocks/page.css);
-@import url(./blocks/nav.css);
-@import url(./blocks/hero.css);
-@import url(./blocks/areas.css);
-@import url(./blocks/workflow.css);
-@import url(./blocks/footer.css);
-
-
+@import url(./css/vendor/normalize.css);
+@import url(./css/vendor/fonts.css);
+@import url(./css/base/variables.css);
+@import url(./css/blocks/pages/home/page.css);
+@import url(./css/blocks/common/nav.css);
+@import url(./css/blocks/pages/home/hero.css);
+@import url(./css/blocks/pages/home/areas.css);
+@import url(./css/blocks/pages/home/workflow.css);
+@import url(./css/blocks/common/footer.css);
