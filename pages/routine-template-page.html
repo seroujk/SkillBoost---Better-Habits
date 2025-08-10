@@ -40,33 +40,54 @@
             >
           </p>
         </section>
-        <section class="cards___section">
-          <div class="cards___container">
-            <template id="card">
+        <section class="cards__section">
+          <template id="card">
+            <ul class="cards__container">
               <li class="card">
                 <button class="card__btn-delete" type="button"></button>
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <ul class="card__list">
-                    <p class="card__list-item"></p>
+                    <li class="card__list-item">
+                      <span class="card__list-paragraph"></span>
+                    </li>
                   </ul>
-                  <button type="button" class="card__btn"></button>
                 </div>
+                <button type="button" class="card__btn">
+                  Try This Routine
+                </button>
               </li>
-            </template>
-          </div>
-          <div class="cards__container">
+            </ul>
+          </template>
+
+          <ul class="cards__container">
             <li class="card">
               <button class="card__btn-delete" type="button"></button>
               <div class="card__content">
-                <h2 class="card__title"></h2>
+                <h2 class="card__title">Create a Routine</h2>
                 <ul class="card__list">
-                  <p class="card__list-item"></p>
+                  <li class="card__list-item">
+                    <span class="card__list-paragraph">Wake up Early</span>
+                  </li>
                 </ul>
-                <button type="button" class="card__btn"></button>
               </div>
+              <button type="button" class="card__btn">Try This Routine</button>
             </li>
-          </div>
+          </ul>
+          <ul class="cards__container">
+            <li class="card">
+              <button class="card__btn-delete" type="button"></button>
+              <div class="card__content">
+                <h2 class="card__title">Create a Routine</h2>
+                <ul class="card__list">
+                  <li class="card__list-item">
+                    <span class="card__list-paragraph">Wake up Early</span>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="card__btn">Try This Routine</button>
+            </li>
+          </ul>
         </section>
       </main>
       <footer></footer>
