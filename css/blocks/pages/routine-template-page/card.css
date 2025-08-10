@@ -1,13 +1,13 @@
 .cards__section {
   display: flex;
-  max-width: var(--max-width-content);
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, var(--card-width));
-  gap: var(--spacing-lg) var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -16,24 +16,24 @@
 }
 
 .card {
-  max-width: var(--card-width);
+  max-width: 413px;
   position: relative;
-  height: var(--card-height);
+  height: 413px;
   margin: 0;
-  padding: var(--spacing-md);
+  padding: 30px;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-light);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-base);
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
   overflow: hidden;
   flex-direction: column;
 }
 
 .card:hover,
 .card:focus-within {
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 12px 28px rgba(79, 57, 246, 0.15);
   transform: translateY(-2px);
 }
 
@@ -62,7 +62,7 @@
   margin: 0;
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-lg);
-  margin: 0 0 var(--spacing-xs);
+  margin: 0 0 10px;
   align-items: center;
   justify-content: center;
 }
@@ -75,13 +75,13 @@
 }
 
 .card__list-item {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 10px;
   margin-top: 0;
   list-style-type: disc;
 }
 
 .card__list-item::marker {
-  color: var(--color-marker);
+  color: #ff7b19;
   display: flex;
   align-content: center;
   font-size: var(--font-size-xl);
@@ -91,7 +91,7 @@
   margin: 0;
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
+  color: #4a5565;
   line-height: 1.5;
   text-align: center;
 }
@@ -102,11 +102,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: #ff7b19;
   width: 100%;
-  padding: var(--spacing-xs) 0;
+  padding: 10px 0;
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 950px) {
@@ -121,7 +121,7 @@
   .cards__container {
     display: flex;
     flex-direction: column;
-    width: var(--card-width);
+    width: 413px;
   }
 
   .card {
@@ -157,7 +157,7 @@
   }
 
   .card {
-    padding: var(--spacing-sm);
+    padding: 20px;
     max-width: calc(100%-20px);
   }
 
