@@ -23,7 +23,7 @@
   padding: 30px;
   display: flex;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.2s, transform 0.2s;
@@ -65,13 +65,14 @@
   margin: 0 0 10px;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;;
 }
 
 .card__list {
   padding: 0;
   margin: 0;
   width: 100%;
-  text-align: center;
 }
 
 .card__list-item {
@@ -84,16 +85,16 @@
   color: #ff7b19;
   display: flex;
   align-content: center;
-  font-size: var(--font-size-xl);
 }
 
 .card__list-paragraph {
   margin: 0;
   font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-base);
+  font-size: 24px;
   color: #4a5565;
   line-height: 1.5;
   text-align: center;
+  font-family: "Geist", Arial, Helvetica, sans-serif;;
 }
 
 .card__btn {
@@ -103,10 +104,12 @@
   justify-content: center;
   align-items: center;
   background-color: #ff7b19;
+  font-size: 24px;
   width: 100%;
   padding: 10px 0;
   border: none;
   border-radius: 8px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;;
 }
 
 @media screen and (max-width: 950px) {

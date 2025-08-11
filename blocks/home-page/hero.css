@@ -45,6 +45,7 @@
   color: white;
   font-family: "Geist", Arial, Helvetica, sans-serif;
   font-weight: 500;
+  font-size: 20px;
   padding: 8px 40px;
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;

@@ -8,34 +8,55 @@
       name="description"
       content="A template for organizing daily routines and tasks."
     />
-    <link rel="stylesheet" href="../css/pages/routine-template-page.css" />
+    <link rel="stylesheet" href="../index.css" />
     <link rel="icon" href="../../favicon.ico" />
     <title>Routine Template Page</title>
   </head>
   <body>
     <div class="page">
-      <header>
+      <header class="header">
         <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__list-item">
-              <button type="button" class="nav__button"></button>
+          <div class="nav__brand">
+           <a href="../index.html"> <img
+              src="../images/logo.svg"
+              alt="SkillBoost Logo"
+              class="nav__brand-logo"
+
+            /></a>
+            <h2 class="nav__brand-name">SkillBoost</h2>
+          </div>
+          <input type="checkbox" id="menu-toggle" class="nav__menu-toggle" />
+          <label for="menu-toggle" class="nav__menu-label"></label>
+          <ul class="nav__links">
+            <li>
+              <a href="#" class="nav__link"
+                >Templates</a
+              >
             </li>
-            <li class="nav__list-item">
-              <img class="nav__image" src="../images/clock-icon.png" />
+            <li>
+              <a href="#" class="nav__link">Routine Tracker</a>
             </li>
-            <li class="nav__list-item">
-              <p class="nav__paragraph">Morning Routines</p>
+            <li>
+              <a href="#" class="nav__link">Your Own Podcast</a>
+            </li>
+            <li>
+              <a href="#" class="nav__link nav__theme-mobile">Dark Mode 🌙 </a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="nav__theme"
+            aria-label="Toggle theme"
+          ></button>
         </nav>
       </header>
       <main>
         <section class="heading__section">
           <h1 class="heading__title">
-            Start Your Day with <span class="heading__span">Purpose</span>
+            Start Your Days with <span class="heading__span">Purpose</span>
           </h1>
           <p class="heading__paragraph">
-            Transform your mornings with proven routines that set you up for
+            Transform your life with proven routines that set you up for
             <span class="heading__paragraph_span"
               >success throughout the day.</span
             >
@@ -45,7 +66,6 @@
           <template id="card">
             <ul class="cards__container">
               <li class="card">
-                <button class="card__btn-delete" type="button"></button>
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <ul class="card__list">
@@ -61,9 +81,65 @@
             </ul>
           </template>
         </section>
+
+        <!-- Try This Routine Modal -->
+        <template id="routine-modal">
+          <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <button class="modal__close">×</button>
+              <h2 class="modal__title"></h2>
+              <ul class="modal__list"></ul>
+              <label class="modal__label">
+                Describe your perfect routine
+              </label>
+              <input type="text" class="modal__input"> 
+              <button class="modal__generate-btn">Generate Routine</button>
+            </div>
+          </div>
+        </template>
+        
       </main>
-      <footer></footer>
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <img
+              src="../images/logo.svg"
+              alt="SkillBoost logo"
+              class="footer__logo"
+            />
+            <div class="footer__brand-text">
+              <h2 class="footer__logo-name">SkillBoost</h2>
+              <p class="footer__tagline">
+                Empowering you to build better habits and boost your
+                productivity.
+              </p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="Features">
+            <h3 class="footer__heading">Features</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Morning Routines</a></li>
+              <li><a href="#" class="footer__link">Study Habits</a></li>
+              <li><a href="#" class="footer__link">Wellness</a></li>
+              <li><a href="#" class="footer__link">Time Management</a></li>
+            </ul>
+          </nav>
+          <div class="footer__social">
+            <a
+              class="footer__github"
+              href="https://github.com/seroujk/SkillBoost---Better-Habits"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="footer__github-icon" aria-hidden="true"></span>
+              <span class="footer__github-text">GitHub</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer__legal">© 2025 SkillBoost. All rights reserved.</div>
+      </footer>
     </div>
-    <script defer src="./scripts/routine-template-page.js"></script>
+    <script defer src="../scripts/routine-template-page.js"></script>
   </body>
 </html>

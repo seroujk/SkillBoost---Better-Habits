@@ -1,0 +1,97 @@
+
+.modal {
+  position: fixed;
+  inset: 0; 
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
+
+/* Show modal when active */
+.modal.is-open {
+  display: flex;
+}
+
+/* Overlay */
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* black with transparency */
+}
+
+/* Modal content box */
+.modal__content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 12px; /* rounded corners like cards */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* card-like shadow */
+  z-index: 1; /* above overlay */
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 90%;
+  animation: fadeInScale 0.25s ease;
+  font-family: "Geist","sans-serif";
+}
+
+/* Close button */
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* List inside modal */
+.modal__list {
+  margin-top: 1rem;
+  list-style: disc inside;
+  padding: 0;
+}
+
+.modal__list li {
+  margin-bottom: 0.5rem;
+}
+
+.modal__label{
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.modal__input{
+  height: 100px;
+}
+
+.modal__generate-btn{
+  margin-top: 20px;
+  max-height: fit-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: #ff7b19;
+  font-size: 18px;
+  width: 50%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-family: "Geist", Arial, Helvetica, sans-serif;;
+}
+
+
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
