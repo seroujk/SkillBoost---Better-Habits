@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "d17b19b1-4ca2-45f6-a3b5-ed798592d7b4",
+		"name": "SkillBoost API",
+		"description": "API collection for SkillBoost habit tracking backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29286732"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				},
+				"description": "Check if the API is running"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Habits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"promptText\": \"My name is John Smith. I work as a software developer remotely from home. I sit for long hours and often feel stressed about deadlines. I want to improve my physical health, manage stress better, and have a more balanced work-life routine. I currently struggle with irregular sleep patterns and eating too much fast food.\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-habits",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-habits"
+					]
+				},
+				"description": "Generate personalized daily habits based on user context"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Weekly Planner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"promptText\": \"This week I have a major project deadline on Friday. I need to focus on completing the client presentation, finish the code review, and prepare for the team meeting on Wednesday. I also want to maintain my exercise routine and spend quality time with my family over the weekend.\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-weekly",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-weekly"
+					]
+				},
+				"description": "Generate weekly goals and action steps across different life categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Monthly Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"promptText\": \"This month I successfully launched my side project and got positive feedback from users. I maintained my morning workout routine 4 days a week and read 2 books. However, I struggled with time management and sometimes worked late into the night. I learned that I work best with structured breaks and need to set boundaries with work hours.\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-monthly",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-monthly"
+					]
+				},
+				"description": "Generate monthly review with reflection, priorities, and focus habits"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Podcast Transcript",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"Sarah\",\n  \"firstPrompt\": \"I'm Sarah, a marketing manager who recently started prioritizing my health. I want to build consistent habits around exercise, better sleep, and stress management.\",\n  \"habits\": {\n    \"Note\": \"Start small and be consistent. Progress over perfection!\",\n    \"Habits\": [\n      \"Morning walk for 15 minutes\",\n      \"Drink 8 glasses of water daily\",\n      \"Sleep by 10:30 PM weekdays\",\n      \"5-minute meditation after lunch\",\n      \"Prepare healthy snacks on Sunday\"\n    ]\n  },\n  \"weekly\": {\n    \"WeekOf\": \"January 15-21, 2024\",\n    \"HealthAndFitness\": {\n      \"Goal\": \"Exercise 4 times this week\",\n      \"ActionSteps\": [\n        \"Schedule gym sessions in calendar\",\n        \"Prepare workout clothes night before\",\n        \"Try one new healthy recipe\"\n      ]\n    },\n    \"CareerAndWork\": {\n      \"Goal\": \"Complete Q1 marketing strategy\",\n      \"ActionSteps\": [\n        \"Research competitor analysis\",\n        \"Draft campaign timeline\",\n        \"Present to stakeholders Friday\"\n      ]\n    },\n    \"PersonalGrowth\": {\n      \"Goal\": \"Read for 30 minutes daily\",\n      \"ActionSteps\": [\n        \"Choose book on leadership\",\n        \"Set reading time before bed\",\n        \"Take notes on key insights\"\n      ]\n    },\n    \"Relationships\": {\n      \"Goal\": \"Connect with friends and family\",\n      \"ActionSteps\": [\n        \"Call mom twice this week\",\n        \"Plan coffee date with Emma\",\n        \"Send thank you note to mentor\"\n      ]\n    },\n    \"Finance\": {\n      \"Goal\": \"Track expenses for the week\",\n      \"ActionSteps\": [\n        \"Use budgeting app daily\",\n        \"Review subscription services\",\n        \"Set aside money for emergency fund\"\n      ]\n    },\n    \"WeeklyReflection\": {\n      \"WhatWentWell\": \"Maintained morning routine consistently\",\n      \"WhatCouldBeImproved\": \"Need better evening wind-down routine\"\n    }\n  },\n  \"monthly\": {\n    \"GoalsCompleted\": \"Established morning routine and improved sleep schedule\",\n    \"GoalsInProgress\": \"Building consistent exercise habit and stress management\",\n    \"Reflection\": {\n      \"Where\": \"Home office and local gym\",\n      \"BiggestWins\": \"Sleeping 7+ hours nightly for 3 weeks straight\",\n      \"ChallengesAndHowOvercame\": \"Work stress - used breathing exercises and boundaries\",\n      \"WhatILearnedAboutMyself\": \"I need structure and small wins to stay motivated\"\n    },\n    \"TopPriorities\": [\n      \"Consistent exercise\",\n      \"Stress management\",\n      \"Work-life balance\"\n    ],\n    \"FocusHabits\": [\n      \"Morning workouts\",\n      \"Daily meditation\",\n      \"Evening routine\"\n    ]\n  }\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-podcast",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-podcast"
+					]
+				},
+				"description": "Generate motivational podcast transcript with two speakers"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Podcast Audio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"transcript\": \"Speaker 1: Hi, we're Skill Boost, and this episode is for Sarah! We're so excited to celebrate your incredible journey toward better health and wellness. Speaker 2: Sarah, what you've accomplished is truly inspiring. You've established a solid morning routine and improved your sleep schedule - that's no small feat! Speaker 1: Let's talk about those amazing wins. Sleeping 7+ hours nightly for three weeks straight? That's the foundation everything else builds on. Your body and mind are thanking you. Speaker 2: And we love how you've tackled work stress with breathing exercises and boundaries. That shows real self-awareness and growth. It's not about avoiding challenges, but learning how to navigate them skillfully. Speaker 1: Your focus habits for this next phase are spot-on: morning workouts, daily meditation, and a solid evening routine. These aren't just habits, Sarah - they're investments in your future self. Speaker 2: Remember, you've learned something powerful about yourself: you thrive with structure and small wins. Use that knowledge! Each morning workout is a victory, each meditation session is progress. Speaker 1: Sarah, you're not just building habits - you're building a life that aligns with your values. Keep going, stay consistent, and trust the process. We're cheering you on! Speaker 2: This is Skill Boost, and we believe in you, Sarah. Your journey is just beginning, and we can't wait to see where it takes you!\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/generate-podcast-audio",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"generate-podcast-audio"
+					]
+				},
+				"description": "Convert podcast transcript to audio using TTS with multi-speaker voices"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

@@ -10,7 +10,7 @@
   font-size: 5rem;
   color: black;
   text-align: center;
-  margin: 0;
+  margin: 50px 0;
   padding: 20px;
 }
 
@@ -137,6 +137,10 @@
 }
 
 @media (max-width: 700px) {
+  .hero__title {
+    margin: 10px;
+  }
+
   .hero__stats {
     grid-template-columns: 1fr;
   }
