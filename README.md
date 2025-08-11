@@ -21,7 +21,7 @@ Open-source, distraction-free, and focused on what matters: steady progress, one
 
 - **AI-Enhanced Habit Templates** – Morning routines, wellness, study, and time management tailored by Gemini AI.
 - **Smart Recommendations** – Habit analysis and actionable adjustments as you progress.
-- **Motivational Podcast Generation** – Personalized audio created from your goals and habit data.
+- **Motivational Podcast Generation** – Personalized audio created from your goals and habit data (Still being implemented).
 - **Fully Responsive** – Seamless experience on mobile, tablet, and desktop.
 - **Clean CSS Architecture** – Follows BEM principles for clarity and maintainability.
 - **Open Source** – Free and community-driven.
