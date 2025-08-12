@@ -8,6 +8,8 @@ It starts with a simple truth: we want better habits, but real life keeps interr
 
 Open-source, distraction-free, and focused on what matters: steady progress, one habit at a time.
 
+Deployment: https://seroujk.github.io/SkillBoost---Better-Habits/
+
 ## Team
 
 | Name              | GitHub                                               | LinkedIn                                                             |
