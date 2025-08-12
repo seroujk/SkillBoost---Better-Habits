@@ -109,16 +109,16 @@ a {
 }
 
 .hero__stat-icon--gemini {
-  background-image: url(../images/hero/gemini.svg);
+  background-image: url(../../images/hero/gemini.svg);
   background-size: 50%;
 }
 
 .hero__stat-icon--increase {
-  background-image: url(../images/hero/increase.svg);
+  background-image: url(../../images/hero/increase.svg);
 }
 
 .hero__stat-icon--code {
-  background-image: url(../images/hero/code.svg);
+  background-image: url(../../images/hero/code.svg);
 }
 
 .hero__stat-metric {
@@ -141,7 +141,7 @@ a {
 }
 
 @media screen and (max-width: 1400px) and (min-width: 700px) {
-  .hero__stats{
+  .hero__stats {
     gap: 40px 20px;
   }
 }
