@@ -59,7 +59,7 @@ a {
 .hero__button-icon {
   display: inline-block;
   background-color: transparent;
-  background-image: url(../images/hero/arrow.svg);
+  background-image: url(../../images/hero/arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;

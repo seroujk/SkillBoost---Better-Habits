@@ -78,7 +78,7 @@
 
 /* Icon variations */
 .area__card-icon--morning {
-  background-image: url(../images/areas/morning.svg),
+  background-image: url(../../images/areas/morning.svg),
     linear-gradient(90deg, #ff7b19, #fc4831);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -86,7 +86,7 @@
 }
 
 .area__card-icon--brain {
-  background-image: url(../images/areas/brain.svg),
+  background-image: url(../../images/areas/brain.svg),
     linear-gradient(90deg, #5498ff, #5f6dff);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -94,7 +94,7 @@
 }
 
 .area__card-icon--heart {
-  background-image: url(../images/areas/heart.svg),
+  background-image: url(../../images/areas/heart.svg),
     linear-gradient(90deg, #00d974, #00c37b);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -102,7 +102,7 @@
 }
 
 .hero__stat-icon--clock {
-  background-image: url(../images/areas/clock.svg),
+  background-image: url(../../images/areas/clock.svg),
     linear-gradient(90deg, #cc74f5, #ef46ab);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
