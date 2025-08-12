@@ -1,0 +1,210 @@
+.routine-tracker {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ebf2ff;
+  min-height: 100vh;
+  padding: 20px 20px 80px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.routine-tracker__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-width: 370px;
+}
+
+.routine-tracker__headers {
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.routine-tracker__week-selector {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-tracker__week-label {
+  color: black;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.routine-tracker__week-input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #4f39f6;
+  opacity: 90%;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+.routine-tracker__week-input::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(200%);
+  cursor: pointer;
+}
+
+.routine-tracker__week-input:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px;
+}
+
+.habit-card {
+  min-width: 370px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.habit-table-row {
+  background-color: #4f39f6;
+  opacity: 90%;
+  color: white;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.habit-table-header {
+  color: white;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.habit-table-header:first-child {
+  text-align: left;
+  border-radius: 8px 0 0 0;
+}
+
+.habit-table-header:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.habit-name {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.habit-name:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: #555;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background: white;
+}
+
+.custom-checkbox:hover {
+  border-color: #764ba2;
+  transform: scale(1.1);
+}
+
+.custom-checkbox.checked {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-color: #667eea;
+}
+
+.custom-checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.progress-bar {
+  margin-top: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .habit-card {
+    padding: 20px 15px;
+  }
+
+  .habit-table-header,
+  .habit-name {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+}
