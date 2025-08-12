@@ -2,13 +2,6 @@ let habitData = {};
 let routineConfigs = [];
 let currentWeek = "";
 
-const jsonFiles = [
-  { file: "../utils/morning.json", type: "morning" },
-  { file: "../daily.json", type: "daily" },
-  { file: "../weekly.json", type: "weekly" },
-  { file: "../utils/wellness.json", type: "wellness" },
-];
-
 document.addEventListener("DOMContentLoaded", () => {
   setCurrentWeek();
   setupEventListeners();
@@ -45,70 +38,29 @@ function setupEventListeners() {
 }
 
 function loadAllRoutineData(callback) {
-  let loadedCount = 0;
-  jsonFiles.forEach((item) => {
-    loadJsonFile(item.file, item.type, () => {
-      loadedCount++;
-      if (loadedCount === jsonFiles.length) callback();
-    });
-  });
+  loadGeneratedRoutines();
+  callback();
 }
 
-function loadJsonFile(filename, type, callback) {
-  fetch(filename)
-    .then((response) => {
-      if (!response.ok)
-        throw new Error(`HTTP error! status: ${response.status}`);
-      return response.json();
-    })
-    .then((data) => {
-      routineConfigs.push({ ...data, type });
-      callback();
-    })
-    .catch((error) => {
-      console.warn(`Could not load ${filename}:`, error);
-      routineConfigs.push(getFallbackData(type));
-      callback();
-    });
-}
+function loadGeneratedRoutines(filename, type, callback) {
+  const stored = localStorage.getItem("generatedRoutines");
+  routineConfigs = []; // clear anything else
 
-function getFallbackData(type) {
-  const fallbackData = {
-    morning: {
-      title: "🌅 Morning Routine",
-      habits: [
-        "Drink glass of water",
-        "Meditate for 10 minutes",
-        "Eat healthy breakfast",
-        "Take vitamins",
-      ],
-      type: "morning",
-    },
-    daily: {
-      title: "💪 Daily Activities",
-      habits: [
-        "Drink 8 glasses of water",
-        "Exercise for 30 minutes",
-        "Read for 20 minutes",
-      ],
-      type: "daily",
-    },
-    weekly: {
-      title: "🎯 Weekly Goals",
-      habits: [
-        "Learn something new",
-        "Connect with family/friends",
-        "Complete work tasks on time",
-      ],
-      type: "weekly",
-    },
-    wellness: {
-      title: "🧘‍♀️ Wellness",
-      habits: ["physical activity", "8 hours sleep", "mindful activity"],
-      type: "wellness",
-    },
-  };
-  return fallbackData[type] || fallbackData.morning;
+  if (!stored) return;
+
+  try {
+    const parsed = JSON.parse(stored);
+    parsed.forEach((routine) => {
+      routineConfigs.push({
+        title: routine.title,
+        habits: routine.items || [],
+        type:
+          routine.id || `generated-${Math.random().toString(36).slice(2, 8)}`, // unique type/id for tracking
+      });
+    });
+  } catch (err) {
+    console.warn("Error parsing generated routines:", err);
+  }
 }
 
 function renderCards() {
@@ -226,3 +178,26 @@ function showError(message) {
   document.getElementById("error").textContent = message;
   document.getElementById("cards-grid").style.display = "none";
 }
+
+function showNoRoutinesMessage() {
+  // If there are no routines/cards rendered
+  const date = document.querySelector(".routine-tracker__week-selector");
+  const emptyMessage = document.querySelector(
+    ".routine-tracker__header-subtitle-empty"
+  );
+  const generateBtn = document.querySelector(".routine-tracker__empty-btn");
+  if (localStorage.length === 0) {
+    date.style.display = "none";
+    emptyMessage.style.display = "block";
+    generateBtn.style.display = "block";
+  }
+  else{
+    date.style.display = "block";
+    emptyMessage.style.display = "none";
+    generateBtn.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", showNoRoutinesMessage);
+
+

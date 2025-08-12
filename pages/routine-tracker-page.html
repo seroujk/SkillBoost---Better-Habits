@@ -17,11 +17,11 @@
     <header class="header">
       <nav class="nav">
         <div class="nav__brand">
-          <a href="../index.html">
-            <img
-              src="../images/logo.svg"
-              alt="SkillBoost Logo"
-              class="nav__brand-logo"
+         <a href="../index.html"> <img
+            src="../images/logo.svg"
+            alt="SkillBoost Logo"
+            class="nav__brand-logo"
+
           /></a>
           <h2 class="nav__brand-name">SkillBoost</h2>
         </div>
@@ -29,13 +29,17 @@
         <label for="menu-toggle" class="nav__menu-label"></label>
         <ul class="nav__links">
           <li>
-            <a href="#" class="nav__link">Templates</a>
+            <a href="../index.html" class="nav__link"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="#" class="nav__link">Routine Tracker</a>
+            <a href="./routine-template-page.html" class="nav__link"
+              >Templates</a
+            >
           </li>
           <li>
-            <a href="#" class="nav__link">Your Own Podcast</a>
+            <a href="./routine-tracker-page.html" class="nav__link">Routine Tracker</a>
           </li>
           <li>
             <a href="#" class="nav__link nav__theme-mobile">Dark Mode 🌙 </a>
@@ -51,7 +55,9 @@
     <main class="routine-tracker">
       <div class="routine-tracker__container">
         <div class="routine-tracker__headers">
-          <h1 class="routine-tracker__header-title">Daily Habit Tracker</h1>
+          <h1 class="routine-tracker__header-title">Habit Tracker</h1>
+          <h1 class="routine-tracker__header-subtitle-empty">You have not generated any routines yet...</h1>
+          <a href="./routine-template-page.html"><button class="routine-tracker__empty-btn">Generate Routine</button></a>
           <div class="routine-tracker__week-selector">
             <label class="routine-tracker__week-label" for="week-input"
               >Week of:</label
@@ -148,17 +154,15 @@
           <div class="footer__brand-text">
             <h2 class="footer__logo-name">SkillBoost</h2>
             <p class="footer__tagline">
-              Empowering you to build better habits and boost your productivity.
+              Empowering you to build better habits and boost your
+              productivity.
             </p>
           </div>
         </div>
         <nav class="footer__nav" aria-label="Features">
           <h3 class="footer__heading">Features</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">Morning Routines</a></li>
-            <li><a href="#" class="footer__link">Study Habits</a></li>
-            <li><a href="#" class="footer__link">Wellness</a></li>
-            <li><a href="#" class="footer__link">Time Management</a></li>
+            <li><a href="../pages/routine-template-page.html" class="footer__link">Generate Routines</a></li>
           </ul>
         </nav>
         <div class="footer__social">
@@ -176,5 +180,6 @@
       <div class="footer__legal">© 2025 SkillBoost. All rights reserved.</div>
     </footer>
     <script src="../scripts/routine-tracker-page.js"></script>
+    <script defer src="../utils/light-dark-mode.js"></script>
   </body>
 </html>

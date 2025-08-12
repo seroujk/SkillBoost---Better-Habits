@@ -35,25 +35,26 @@
   }
 
   .heading__title {
-    font-size: 1.8rem;
+    font-size: 4rem;
   }
 
   .heading__span {
-    font-size: 1.8rem;
+    font-size: 4rem;
   }
 
   .heading__paragraph {
     font-size: 1.2rem;
+    padding: 20px;
   }
 }
 
 @media screen and (max-width: 417px) {
   .heading__title {
-    font-size: 1.2rem;
+    font-size: 4rem;
   }
 
   .heading__span {
-    font-size: 1rem;
+    font-size: 4rem;
   }
 
   .heading__paragraph {

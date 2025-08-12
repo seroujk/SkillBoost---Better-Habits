@@ -15,12 +15,13 @@
 @media screen and (max-width: 950px) {
   .page {
     font-size: var(--font-size-xl);
+    padding: 20px;
   }
 }
 
 @media screen and (max-width: 417px) {
   .page {
     font-size: var(--font-size-sm);
-  
+    padding: 20px;
   }
 }

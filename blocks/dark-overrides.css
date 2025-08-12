@@ -1,0 +1,130 @@
+/* Global Dark Mode Overrides (drop-in) */
+/* Import this LAST in index.css so it wins specificity. */
+
+body.dark-mode,
+body.dark-mode html {
+  background: #172030 !important;
+  color: #e4ecff !important;
+}
+
+/* Common surfaces */
+body.dark-mode .page,
+body.dark-mode .header,
+body.dark-mode [class*="container"],
+body.dark-mode [class*="surface"],
+body.dark-mode [class*="section"] {
+  background: #172030 !important;
+  color: #e4ecff !important;
+  border-color: #2a3b5e !important;
+  box-shadow: none !important;
+}
+
+/* Text & links */
+body.dark-mode h1,
+body.dark-mode .nav__link,
+body.dark-mode .footer__link {
+  color: #e4ecff !important;
+}
+
+
+body.dark-mode .footer__tagline {
+  color: #b7c5e6 !important;
+}
+
+/* Logo */
+body.dark-mode .nav__brand-name {
+  color: #e4ecff !important;
+}
+
+/* Card Button */
+
+body.dark-mode .card__btn {
+  background: #ff7b19 !important;
+  color: #0b1220 !important;
+}
+
+/* Hero Secection */
+
+body.dark-mode .hero__description {
+  color: #b7c5e6 !important;
+}
+
+body.dark-mode .areas__title{
+  color: #e4ecff !important;
+}
+
+body.dark-mode .hero__stat-label {
+   color: #e4ecff !important;
+}
+
+body.dark-mode,
+.hero__button-icon .hero__button {
+  color: #e4ecff !important;
+}
+
+body.dark-mode .hero__stat-metric {
+  color: #e4ecff !important;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #e4ecff !important;
+  color: #0b1220 !important;
+}
+
+body.dark-mode .area__card-description {
+  color: #0b1220 !important;
+}
+
+/* Modal  */
+
+body.dark-mode .modal__content {
+  background-color: #0b1220 !important;
+}
+
+body.dark-mode .modal__close {
+  color: white !important;
+}
+
+body.dark-mode .modal__overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+body.dark-mode .modal {
+  background: transparent !important;
+}
+
+/* SVG icons inherit text color */
+body.dark-mode svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Images/logos: do NOT invert */
+body.dark-mode img {
+  filter: none !important;
+}
+
+/* Tracker Checbox */
+
+body.dark-mode .checkbox-container {
+  background-color: #e4ecff !important;
+}
+
+/* Tracker Backround */
+
+body.dark-mode .routine-tracker {
+  background-color: #172030;
+}
+
+body.dark-mode .routine-tracker__container {
+  background-color: #172030 !important;
+}
+
+/* Mobile Navs */
+
+@media (max-width: 900px) {
+  body.dark-mode .nav__link {
+    color: #0b1220 !important;
+  }
+}

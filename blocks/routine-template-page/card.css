@@ -2,14 +2,15 @@
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px; /* breathing room on small screens */
 }
 
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 413px);
-  gap: 40px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 413px));
+  gap: clamp(16px, 3vw, 40px) clamp(12px, 2vw, 20px);
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px;
   list-style-type: none;
   width: 100%;
   justify-content: center;
@@ -37,18 +38,6 @@
   transform: translateY(-2px);
 }
 
-.card__btn-delete {
-  height: 30px;
-  width: 30px;
-  border: none;
-  background-color: transparent;
-  align-self: flex-end;
-  cursor: pointer;
-  background-image: url(../../../../images/exit.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .card__content {
   display: flex;
   flex-direction: column;
@@ -59,14 +48,13 @@
 .card__title {
   display: flex;
   align-content: flex-start;
-  margin: 0;
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-lg);
   margin: 0 0 10px;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
-  font-family: "Geist", Arial, Helvetica, sans-serif;;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  font-size: clamp(1.25rem, 3.2vw, 2rem); /* responsive */
+  font-family: "Geist", Arial, Helvetica, sans-serif;
 }
 
 .card__list {
@@ -90,11 +78,11 @@
 .card__list-paragraph {
   margin: 0;
   font-weight: var(--font-weight-normal);
-  font-size: 24px;
+  font-size: clamp(1rem, 2.8vw, 1.25rem); /* responsive */
   color: #4a5565;
   line-height: 1.5;
   text-align: center;
-  font-family: "Geist", Arial, Helvetica, sans-serif;;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
 }
 
 .card__btn {
@@ -104,67 +92,41 @@
   justify-content: center;
   align-items: center;
   background-color: #ff7b19;
-  font-size: 24px;
+  font-size: clamp(0.95rem, 2.5vw, 1.25rem); /* responsive */
   width: 100%;
-  padding: 10px 0;
+  padding: clamp(10px, 2.5vw, 14px) 0;
   border: none;
   border-radius: 8px;
-  font-family: "Geist", Arial, Helvetica, sans-serif;;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 950px) {
-  .cards__section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-  }
+/* -------- Breakpoints -------- */
 
+/* Large → Medium */
+@media (max-width: 1200px) {
+  .card { height: auto; } /* allow content to flow */
+}
+
+/* Tablet */
+@media (max-width: 900px) {
   .cards__container {
-    display: flex;
-    flex-direction: column;
-    width: 413px;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
+  .card { padding: 24px; }
+}
 
+/* Phones */
+@media (max-width: 600px) {
+  .cards__section { padding: 0 16px; }
+  .cards__container { grid-template-columns: 1fr; }
   .card {
     max-width: 100%;
-  }
-
-  .card__title {
-    font-size: var(--font-size-md);
-  }
-
-  .card__list-item::marker {
-    font-size: 0.9rem;
-  }
-
-  .card__list-paragraph {
-    font-size: 0.9rem;
+    padding: 20px;
   }
 }
 
-@media screen and (max-width: 417px) {
-  .cards__section {
-    max-width: fit-content;
-    gap: 10px;
-    margin: 0 auto;
-  }
-
-  .cards__container {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: fit-content;
-  }
-
-  .card {
-    padding: 20px;
-    max-width: calc(100%-20px);
-  }
-
-  .card__title {
-    font-size: 0.8rem;
-  }
+/* Very small phones */
+@media (max-width: 400px) {
+  .card { padding: 16px; }
+  .card__title { font-size: 1rem; }
 }
