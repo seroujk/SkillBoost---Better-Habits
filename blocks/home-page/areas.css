@@ -131,4 +131,8 @@
   .area__card {
     padding: 0px;
   }
+
+  .area__card-description {
+    padding: 10px;
+  }
 }
