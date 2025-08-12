@@ -19,9 +19,8 @@ Open-source, distraction-free, and focused on what matters: steady progress, one
 
 ## Features
 
-- **AI-Enhanced Habit Templates** – Morning routines, wellness, study, and time management tailored by Gemini AI.
-- **Smart Recommendations** – Habit analysis and actionable adjustments as you progress.
-
+- **AI-Enhanced Habit Templates** – Morning routines, wellness, and study habits, tailored by Gemini AI.
+- **Habit Tracking** – Track your progress weeky by week with responsive tracking cards.
 - **Fully Responsive** – Seamless experience on mobile, tablet, and desktop.
 - **Clean CSS Architecture** – Follows BEM principles for clarity and maintainability.
 - **Open Source** – Free and community-driven.
