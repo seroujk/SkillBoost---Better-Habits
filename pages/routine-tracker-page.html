@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="routine, template, daily tasks" />
+    <meta
+      name="description"
+      content="A tracker for tracking daily routines and tasks."
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="icon" href="../../favicon.ico" />
+    <title>Routine Tracking Page</title>
+  </head>
+  <body>
+    <!-- <div class="page"> -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__brand">
+          <a href="../index.html">
+            <img
+              src="../images/logo.svg"
+              alt="SkillBoost Logo"
+              class="nav__brand-logo"
+          /></a>
+          <h2 class="nav__brand-name">SkillBoost</h2>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="nav__menu-toggle" />
+        <label for="menu-toggle" class="nav__menu-label"></label>
+        <ul class="nav__links">
+          <li>
+            <a href="#" class="nav__link">Templates</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Routine Tracker</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link">Your Own Podcast</a>
+          </li>
+          <li>
+            <a href="#" class="nav__link nav__theme-mobile">Dark Mode 🌙 </a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="nav__theme"
+          aria-label="Toggle theme"
+        ></button>
+      </nav>
+    </header>
+    <main class="routine-tracker">
+      <div class="routine-tracker__container">
+        <div class="routine-tracker__headers">
+          <h1 class="routine-tracker__header-title">Daily Habit Tracker</h1>
+          <div class="routine-tracker__week-selector">
+            <label class="routine-tracker__week-label" for="week-input"
+              >Week of:</label
+            >
+            <input
+              class="routine-tracker__week-input"
+              type="date"
+              id="week-input"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="error" id="error" style="display: none"></div>
+        <div class="cards-grid" id="cards-grid" style="display: none"></div>
+      </div>
+
+      <!-- Template for habit cards -->
+      <template id="habit-card-template">
+        <div class="habit-card">
+          <h3 class="card-title"></h3>
+          <table class="habit-table">
+            <thead>
+              <tr class="habit-table-row">
+                <th class="habit-table-header">Habit</th>
+                <th class="habit-table-header">Mon</th>
+                <th class="habit-table-header">Tue</th>
+                <th class="habit-table-header">Wed</th>
+                <th class="habit-table-header">Thu</th>
+                <th class="habit-table-header">Fri</th>
+                <th class="habit-table-header">Sat</th>
+                <th class="habit-table-header">Sun</th>
+              </tr>
+            </thead>
+            <tbody class="habit-tbody"></tbody>
+          </table>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <div class="progress-text">0% Complete</div>
+        </div>
+      </template>
+
+      <!-- Template for habit rows -->
+      <template id="habit-row-template">
+        <tr>
+          <td class="habit-name"></td>
+          <td class="habit-name__data">
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="mon"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="tue"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="wed"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="thu"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="fri"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="sat"></div>
+            </div>
+          </td>
+          <td>
+            <div class="checkbox-container">
+              <div class="custom-checkbox" data-day="sun"></div>
+            </div>
+          </td>
+        </tr>
+      </template>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img
+            src="../images/logo.svg"
+            alt="SkillBoost logo"
+            class="footer__logo"
+          />
+          <div class="footer__brand-text">
+            <h2 class="footer__logo-name">SkillBoost</h2>
+            <p class="footer__tagline">
+              Empowering you to build better habits and boost your productivity.
+            </p>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Features">
+          <h3 class="footer__heading">Features</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Morning Routines</a></li>
+            <li><a href="#" class="footer__link">Study Habits</a></li>
+            <li><a href="#" class="footer__link">Wellness</a></li>
+            <li><a href="#" class="footer__link">Time Management</a></li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <a
+            class="footer__github"
+            href="https://github.com/seroujk/SkillBoost---Better-Habits"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="footer__github-icon" aria-hidden="true"></span>
+            <span class="footer__github-text">GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__legal">© 2025 SkillBoost. All rights reserved.</div>
+    </footer>
+    <script src="../scripts/routine-tracker-page.js"></script>
+  </body>
+</html>
