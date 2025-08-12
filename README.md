@@ -4,7 +4,7 @@
 
 It starts with a simple truth: we want better habits, but real life keeps interrupting. Lists help for a week, then fade.
 
-**SkillBoost** was built to change that. Developed with a **vanilla stack** — HTML, CSS, and JavaScript on the frontend, Node.js powering the backend calls to **Google’s Gemini AI** — it learns how you live and adapts to you. Gemini shapes routines that fit your goals.
+**[SkillBoost](https://seroujk.github.io/SkillBoost---Better-Habits/)** was built to change that. Developed with a **vanilla stack** — HTML, CSS, and JavaScript on the frontend, Node.js powering the backend calls to **Google’s Gemini AI** — it learns how you live and adapts to you. Gemini shapes routines that fit your goals.
 
 Open-source, distraction-free, and focused on what matters: steady progress, one habit at a time.
 
