@@ -58,7 +58,7 @@
 }
 
 .card__list {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   width: 100%;
 }
@@ -104,7 +104,9 @@
 
 /* Large → Medium */
 @media (max-width: 1200px) {
-  .card { height: auto; } /* allow content to flow */
+  .card {
+    height: auto;
+  } /* allow content to flow */
 }
 
 /* Tablet */
@@ -112,13 +114,19 @@
   .cards__container {
     grid-template-columns: repeat(2, minmax(260px, 1fr));
   }
-  .card { padding: 24px; }
+  .card {
+    padding: 24px;
+  }
 }
 
 /* Phones */
 @media (max-width: 600px) {
-  .cards__section { padding: 0 16px; }
-  .cards__container { grid-template-columns: 1fr; }
+  .cards__section {
+    padding: 0 16px;
+  }
+  .cards__container {
+    grid-template-columns: 1fr;
+  }
   .card {
     max-width: 100%;
     padding: 20px;
@@ -127,6 +135,10 @@
 
 /* Very small phones */
 @media (max-width: 400px) {
-  .card { padding: 16px; }
-  .card__title { font-size: 1rem; }
+  .card {
+    padding: 16px;
+  }
+  .card__title {
+    font-size: 1rem;
+  }
 }
