@@ -132,7 +132,7 @@
   }
 
   .nav__menu-toggle:checked + .nav__menu-label {
-    background-image: url(../../images/buttons/exit.svg);
+    background-image: url(../images/buttons/exit.svg);
   }
 
   .nav__links {
