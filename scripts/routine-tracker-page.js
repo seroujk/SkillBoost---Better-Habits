@@ -3,6 +3,15 @@ let routineConfigs = [];
 let currentWeek = "";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const savedData = localStorage.getItem("habitData");
+  if (savedData) {
+    try {
+      habitData = JSON.parse(savedData);
+    } catch (err) {
+      console.warn("Failed to parse saved habitData:", err);
+      habitData = {};
+    }
+  }
   setCurrentWeek();
   setupEventListeners();
   loadAllRoutineData(() => {
@@ -10,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSavedHabitData();
     updateAllProgress();
   });
+  showNoRoutinesMessage();
 });
 
 function setCurrentWeek() {
@@ -126,6 +136,8 @@ function toggleHabit(checkbox) {
 
   checkbox.classList.toggle("checked", habitData[week][habit][day]);
   updateProgress(cardType);
+
+  localStorage.setItem("habitData", JSON.stringify(habitData));
 }
 
 function updateProgress(cardType) {
@@ -190,14 +202,9 @@ function showNoRoutinesMessage() {
     date.style.display = "none";
     emptyMessage.style.display = "block";
     generateBtn.style.display = "block";
-  }
-  else{
+  } else {
     date.style.display = "block";
     emptyMessage.style.display = "none";
     generateBtn.style.display = "none";
   }
 }
-
-document.addEventListener("DOMContentLoaded", showNoRoutinesMessage);
-
-

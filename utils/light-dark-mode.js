@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Desktop theme toggle
   if (themeToggle) {
     themeToggle.addEventListener("click", function () {
-      console.log("theme toggeled");
       toggleTheme();
     });
   }
@@ -49,11 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateButtonIcons(theme) {
     if (theme === "dark") {
       if (themeToggle)
-        themeToggle.style.backgroundImage = "url(../images/buttons/sun.svg)";
+        themeToggle.style.backgroundImage =
+          "url(../../../images/buttons/sun.svg)";
       if (mobileThemeToggle) mobileThemeToggle.textContent = "Light Mode ☀️";
     } else {
       if (themeToggle)
-        themeToggle.style.backgroundImage = "url(../images/buttons/moon.svg)";
+        themeToggle.style.backgroundImage =
+          "url(../../../images/buttons/moon.svg)";
       if (mobileThemeToggle) mobileThemeToggle.textContent = "Dark Mode 🌙";
     }
   }
