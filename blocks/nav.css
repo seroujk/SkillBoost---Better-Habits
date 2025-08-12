@@ -34,6 +34,14 @@
 .nav__brand-logo {
   width: 36px;
   height: 36px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.nav__brand-logo:hover {
+  box-shadow: 0 12px 28px rgba(79, 57, 246, 0.15);
+  transform: translateY(-2px);
 }
 
 .nav__brand-name {
@@ -132,7 +140,7 @@
   }
 
   .nav__menu-toggle:checked + .nav__menu-label {
-    background-image: url(../../images/buttons/exit.svg);
+    background-image: url(../images/buttons/exit.svg);
   }
 
   .nav__links {
